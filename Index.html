@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Sahiba Sarkhushzada | Digital Marketing Executive</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0a0a0f;--surface:#12121a;--card:#1a1a26;--border:#2a2a3a;--cream:#f2ede4;--gold:#d4a843;--gold-dim:rgba(212,168,67,0.12);--green:#4caf7d;--accent:#e05c3a;--text:#e8e4dc;--muted:#7a7890;--white:#fff}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 3rem;background:rgba(10,10,15,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Playfair Display',serif;font-size:1.15rem;color:var(--cream);letter-spacing:.03em}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:#000;padding:.45rem 1.1rem;font-weight:600}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:7rem 3rem 4rem;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,rgba(212,168,67,.06) 0%,transparent 70%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(224,92,58,.05) 0%,transparent 60%)}
+.hero-grid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(42,42,58,.3) 1px,transparent 1px),linear-gradient(90deg,rgba(42,42,58,.3) 1px,transparent 1px);background-size:60px 60px}
+.hero-content{position:relative;z-index:1;max-width:640px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--gold-dim);border:1px solid rgba(212,168,67,.3);padding:.35rem .9rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
+.hero-badge::before{content:'●';font-size:.5rem;color:var(--green);animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,5rem);font-weight:700;line-height:1.05;color:var(--white);margin-bottom:1rem}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1rem;color:var(--muted);max-width:460px;margin-bottom:2.5rem;line-height:1.8}
+.proof-strip{display:flex;flex-wrap:wrap;gap:2rem;margin-bottom:2.5rem}
+.proof-item{border-left:2px solid var(--gold);padding-left:1rem}
+.proof-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--white);line-height:1}
+.proof-label{font-size:.72rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:.2rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:#000;padding:.7rem 1.8rem;font-size:.82rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.btn-outline{border:1px solid var(--border);color:var(--text);padding:.7rem 1.8rem;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+/* DOUBT BANNER */
+.doubt-banner{background:rgba(76,175,125,.08);border-top:1px solid rgba(76,175,125,.2);border-bottom:1px solid rgba(76,175,125,.2);padding:1.2rem 3rem;display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.doubt-title{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);white-space:nowrap}
+.doubt-items{display:flex;gap:1.5rem;flex-wrap:wrap}
+.d-item{display:flex;align-items:center;gap:.4rem;font-size:.78rem;color:rgba(232,228,220,.7)}
+.d-item::before{content:'✓';color:var(--green);font-weight:700}
+/* SECTIONS */
+section{padding:5rem 3rem}
+.stag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem}
+.stag::before{content:'';display:inline-block;width:24px;height:1px;background:var(--gold)}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:700;color:var(--white);margin-bottom:.5rem;line-height:1.1}
+.ssub{font-size:.88rem;color:var(--muted);margin-bottom:3rem;max-width:520px}
+/* CASE STUDIES */
+.case-grid{display:flex;flex-direction:column;gap:2rem}
+.case-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:border-color .25s}
+.case-card:hover{border-color:rgba(212,168,67,.4)}
+.case-img{display:none}
+
+
+.case-badge{position:absolute;top:1rem;left:1rem;background:rgba(10,10,15,.88);backdrop-filter:blur(6px);padding:.35rem .7rem;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(212,168,67,.3)}
+.case-verified{position:absolute;bottom:1rem;left:1rem;background:rgba(76,175,125,.92);padding:.25rem .6rem;font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:#fff;font-weight:600}
+.case-body{padding:2rem}.case-card-austin .case-body{border-top:3px solid #d4a843}.case-card-red .case-body{border-top:3px solid #e05c3a}.case-card-sky .case-body{border-top:3px solid #4caf7d}
+.case-tenure{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:.35rem}
+.case-title{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:.25rem}
+.case-role{font-size:.85rem;color:var(--gold);margin-bottom:.8rem;font-weight:500}
+.tenure-note{background:rgba(212,168,67,.06);border:1px solid rgba(212,168,67,.15);padding:.7rem 1rem;font-size:.75rem;color:rgba(212,168,67,.85);line-height:1.6;margin-bottom:1.2rem}
+.tenure-note strong{color:var(--gold)}
+.metrics-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);margin-bottom:1.2rem}
+.metric-box{background:var(--surface);padding:.8rem;text-align:center}
+.mval{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:700;color:var(--white);line-height:1}
+.mval.g{color:var(--green)}.mval.gold{color:var(--gold)}
+.mlbl{font-size:.62rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:.25rem}
+.case-desc{font-size:.82rem;color:var(--muted);line-height:1.8;margin-bottom:1.2rem}
+.case-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.8rem}
+.tools{display:flex;flex-wrap:wrap;gap:.4rem}
+.tool{font-size:.62rem;letter-spacing:.07em;border:1px solid var(--border);padding:.2rem .55rem;color:var(--muted);text-transform:uppercase}
+.live-link{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(212,168,67,.3);display:flex;align-items:center;gap:.3rem}
+/* SAMPLES */
+.samples-section{background:var(--surface)}
+.samples-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.sample-card{background:var(--card);border:1px solid var(--border);overflow:hidden;transition:border-color .25s}
+.sample-card:hover{border-color:rgba(212,168,67,.4)}
+.sample-img-wrap{display:none}
+
+.sample-label{display:none}
+.sample-body{padding:1.5rem;border-top:2px solid var(--gold)}
+.sample-type{font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+.sample-title{font-family:'Playfair Display',serif;font-size:1rem;color:var(--white);margin-bottom:.5rem;line-height:1.3}
+.sample-desc{font-size:.78rem;color:var(--muted);line-height:1.7}
+.sample-stats{display:flex;gap:1rem;margin-top:.8rem;padding-top:.8rem;border-top:1px solid var(--border)}
+.s-stat{font-size:.72rem;color:var(--muted)}
+.s-stat strong{color:var(--green);font-size:.82rem}
+.writing-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem}
+.w-link{background:var(--card);border:1px solid var(--border);padding:1.2rem;display:flex;align-items:flex-start;gap:1rem;transition:border-color .2s}
+.w-link:hover{border-color:rgba(212,168,67,.4)}
+.w-icon{width:36px;height:36px;background:var(--gold-dim);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.w-pub{font-size:.63rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.25rem}
+.w-title{font-size:.82rem;color:var(--text);line-height:1.4}
+.w-tag{display:inline-block;margin-top:.4rem;font-size:.6rem;background:rgba(76,175,125,.1);color:var(--green);padding:.15rem .4rem;letter-spacing:.06em}
+/* SEO */
+.seo-cols{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.phase-lbl{font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--border);padding-bottom:.5rem;margin-bottom:1.2rem}
+.seo-step{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1rem}
+.step-num{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--gold);min-width:26px;line-height:1}
+.step-body strong{display:block;font-size:.84rem;color:var(--white);margin-bottom:.2rem}
+.step-body p{font-size:.78rem;color:var(--muted);line-height:1.7}
+/* KW */
+.kw-section{background:var(--surface)}
+table.kw{width:100%;border-collapse:collapse}
+table.kw th{font-size:.63rem;letter-spacing:.15em;text-transform:uppercase;text-align:left;padding:.8rem 1rem;background:rgba(212,168,67,.08);color:var(--gold);border-bottom:1px solid rgba(212,168,67,.2)}
+table.kw td{padding:.85rem 1rem;font-size:.82rem;border-bottom:1px solid var(--border);color:var(--text)}
+table.kw tr:hover td{background:rgba(255,255,255,.02)}
+.vol{display:inline-block;padding:.15rem .5rem;font-size:.7rem;font-weight:600;border-radius:3px}
+.vh{background:rgba(76,175,125,.15);color:var(--green)}.vm{background:rgba(212,168,67,.15);color:var(--gold)}.vl{background:rgba(224,92,58,.15);color:var(--accent)}
+.kintent{font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;padding:.15rem .5rem;border:1px solid}
+.ki{color:#5b9cf6;border-color:rgba(91,156,246,.3)}.kt{color:var(--accent);border-color:rgba(224,92,58,.3)}.kn{color:#c084fc;border-color:rgba(192,132,252,.3)}
+/* CAMPAIGNS */
+.camp-tabs{display:flex;border:1px solid var(--border);margin-bottom:2.5rem}
+.camp-tab{flex:1;padding:.85rem;text-align:center;cursor:pointer;font-size:.73rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:transparent;border:none;border-right:1px solid var(--border);transition:all .2s;font-family:'Outfit',sans-serif}
+.camp-tab:last-child{border-right:none}
+.camp-tab.active{background:var(--gold-dim);color:var(--gold)}
+.camp-panel{display:none}
+.camp-panel.active{display:block}
+.funnel-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:2rem}
+.f-stage{padding:1.2rem 1.5rem;background:var(--card);border:1px solid var(--border);margin-bottom:.3rem}
+.f-stage.top{border-left:3px solid var(--gold)}.f-stage.mid{border-left:3px solid var(--accent);margin-left:.5rem;margin-right:.5rem}.f-stage.bot{border-left:3px solid var(--green);margin-left:1rem;margin-right:1rem}
+.f-stagename{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.3rem}
+.f-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--white);margin-bottom:.3rem}
+.f-bud{font-size:.85rem;font-weight:600}
+.f-goal{font-size:.72rem;color:var(--muted);margin-top:.2rem}
+.camp-cards{display:flex;flex-direction:column;gap:1rem}
+.cc{background:var(--card);border:1px solid var(--border);padding:1.4rem}
+.cc-head{font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.8rem}
+.cc-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;margin-bottom:.8rem}
+.cc-m{text-align:center;background:var(--surface);padding:.6rem .3rem}
+.cc-mv{font-family:'Playfair Display',serif;font-size:1.15rem;line-height:1}
+.cc-ml{font-size:.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.copybox{background:var(--surface);border-left:2px solid var(--gold);padding:.8rem 1rem;font-size:.78rem;color:rgba(232,228,220,.65);font-style:italic;line-height:1.7}
+.camp-sum{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);margin-top:2rem}
+.cs-box{background:var(--card);padding:1.2rem 1.5rem}
+.cs-box.hl{background:var(--gold-dim);border-top:2px solid var(--gold)}
+.cs-val{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--white);font-weight:700}
+.cs-lbl{font-size:.63rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-top:.2rem}
+.camp-notes{margin-top:1.5rem;padding:1.2rem;background:rgba(255,255,255,.02);border:1px solid var(--border);font-size:.77rem;color:var(--muted);line-height:1.9}
+.camp-notes strong{color:var(--gold)}
+/* CONTACT */
+.contact-section{background:linear-gradient(135deg,#0a0a0f 0%,#14100a 100%);text-align:center;padding:6rem 3rem;border-top:1px solid var(--border)}
+.contact-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin:1.5rem auto 2rem}
+.contact-item{background:var(--card);border:1px solid var(--border);padding:.9rem 1.5rem;font-size:.8rem;display:flex;align-items:center;gap:.6rem;transition:border-color .2s}
+.contact-item:hover{border-color:var(--gold)}
+.contact-item span{color:var(--gold)}
+.visa-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(76,175,125,.1);border:1px solid rgba(76,175,125,.25);padding:.5rem 1.2rem;font-size:.75rem;color:var(--green);letter-spacing:.1em;text-transform:uppercase;margin:0 auto 1.5rem}
+@media(max-width:900px){
+  nav{padding:.9rem 1.5rem}.nav-links{display:none}
+  section{padding:3.5rem 1.5rem}.hero{padding:6rem 1.5rem 3rem}
+  .case-card{grid-template-columns:1fr}
+  .metrics-row{grid-template-columns:repeat(2,1fr)}.seo-cols{grid-template-columns:1fr}
+  .funnel-layout{grid-template-columns:1fr}.cc-metrics{grid-template-columns:repeat(2,1fr)}
+  .doubt-banner{padding:1rem 1.5rem}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo">Sahiba <span>S.</span></div>
+  <ul class="nav-links">
+    <li><a href="#work">Work</a></li>
+    <li><a href="#samples">Samples</a></li>
+    <li><a href="#seo">SEO</a></li>
+    <li><a href="#campaigns">Campaigns</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:sunshineof12@gmail.com" class="nav-cta">Hire Me</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Open to Work &middot; Dubai UAE &middot; Spouse Visa Holder</div>
+    <h1>Digital<br>Marketing<br><em>Executive</em></h1>
+    <p class="hero-sub">Content Strategist &middot; SEO Specialist &middot; Social Media Manager with 4+ years across publishing, EdTech and real estate. Based in Al Barsha, Dubai.</p>
+    <div class="proof-strip">
+      <div class="proof-item"><div class="proof-num">4+</div><div class="proof-label">Years Experience</div></div>
+      <div class="proof-item"><div class="proof-num">10+</div><div class="proof-label">Industries Served</div></div>
+      <div class="proof-item"><div class="proof-num">3</div><div class="proof-label">Verified Employers</div></div>
+      <div class="proof-item"><div class="proof-num">M.Com</div><div class="proof-label">Punjab University</div></div>
+    </div>
+    <div class="hero-btns">
+      <a href="mailto:sunshineof12@gmail.com" class="btn-primary">Get in Touch &rarr;</a>
+      <a href="#work" class="btn-outline">View Work &darr;</a>
+    </div>
+  </div>
+</section>
+
+<div class="doubt-banner">
+  <div class="doubt-title">Proof Points</div>
+  <div class="doubt-items">
+    <div class="d-item">Real employer links included</div>
+    <div class="d-item">Published articles verified</div>
+    <div class="d-item">Actual metrics shown</div>
+    <div class="d-item">Tenure context explained</div>
+    <div class="d-item">UAE spouse visa &mdash; no sponsorship needed</div>
+  </div>
+</div>
+
+<section id="work">
+  <div class="stag">Verified Work Experience</div>
+  <div class="stitle">Case Studies</div>
+  <div class="ssub">Three roles, three industries. Each with tenure context, real metrics and live employer links you can verify right now.</div>
+  <div class="case-grid">
+
+    <div class="case-card case-card-austin">
+      <div class="case-img">
+        <img src="https://www.austinmacauley.com/sites/default/files/styles/800x533/public/2024-04/Austin-Macauley-Publishers-Office.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&q=80'"
+             alt="Austin Macauley Publishers"/>
+        <div class="case-badge">Austin Macauley Publishers</div>
+        <div class="case-verified">&#10003; Verified Employment</div>
+      </div>
+      <div class="case-body">
+        <div class="case-tenure">Sep 2022 &ndash; Jun 2024 &middot; UK / UAE / USA (Remote)</div>
+        <div class="case-title">Viral Webbs / Austin Macauley</div>
+        <div class="case-role">Digital Marketing Assistant</div>
+        <div class="tenure-note"><strong>Context:</strong> UK, UAE and USA book publishing company &mdash; international scope. Managed SEO blog content, social media scheduling and author promotion campaigns across 3 markets. Role evolved from assistant to full content lead over 22 months.</div>
+        <div class="metrics-row">
+          <div class="metric-box"><div class="mval gold">60+</div><div class="mlbl">Posts/Month</div></div>
+          <div class="metric-box"><div class="mval g">+35%</div><div class="mlbl">Engagement</div></div>
+          <div class="metric-box"><div class="mval gold">3</div><div class="mlbl">Markets Served</div></div>
+          <div class="metric-box"><div class="mval g">40+</div><div class="mlbl">SEO Blogs</div></div>
+        </div>
+        <div class="case-desc">Managed full digital content for a global book publisher &mdash; content calendars, SEO-optimised author blogs, Meta ad campaigns for new book launches and audience growth across Facebook and Instagram.</div>
+        <div class="case-footer">
+          <div class="tools"><span class="tool">Meta Suite</span><span class="tool">WordPress</span><span class="tool">Canva</span><span class="tool">Google Analytics</span><span class="tool">SEMrush</span></div>
+          <a href="https://austinmacauley.ae" target="_blank" class="live-link">Visit Company &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card case-card-red">
+      <div class="case-img">
+        <img src="https://redmarker.io/wp-content/uploads/2022/02/optin-form-img.jpg"
+             onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80'"
+             alt="RedMarker Systems Pakistan"/>
+        <div class="case-badge">Red Marker Systems &middot; EdTech</div>
+        <div class="case-verified">&#10003; Verified Employment</div>
+      </div>
+      <div class="case-body">
+        <div class="case-tenure">Aug 2024 &ndash; May 2025 &middot; Pakistan</div>
+        <div class="case-title">Red Marker Systems</div>
+        <div class="case-role">Digital Marketing Manager</div>
+        <div class="tenure-note"><strong>Tenure note:</strong> Fixed-term contract for a government-linked EdTech startup during their digital transformation phase. Role concluded after project completion &mdash; not a resignation. Full employer reference available on request.</div>
+        <div class="metrics-row">
+          <div class="metric-box"><div class="mval gold">2,100+</div><div class="mlbl">New Followers</div></div>
+          <div class="metric-box"><div class="mval g">+42%</div><div class="mlbl">Organic Reach</div></div>
+          <div class="metric-box"><div class="mval gold">18+</div><div class="mlbl">Campaigns</div></div>
+          <div class="metric-box"><div class="mval g">PKR 280</div><div class="mlbl">Avg. CPL</div></div>
+        </div>
+        <div class="case-desc">Led full digital marketing for Pakistan's leading assessment EdTech platform &mdash; audience growth, lead generation campaigns, SEO content strategy, copywriting and performance reporting. Managed content operations end-to-end: planning, publishing and monthly analytics.</div>
+        <div class="case-footer">
+          <div class="tools"><span class="tool">SEMrush</span><span class="tool">Meta Ads</span><span class="tool">Google Analytics</span><span class="tool">Buffer</span><span class="tool">FigJam</span></div>
+          <a href="https://redmarker.io" target="_blank" class="live-link">Visit Company &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-card case-card-sky">
+      <div class="case-img">
+        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+             alt="Sky Marketing Pakistan Real Estate"/>
+        <div class="case-badge">Sky Marketing &middot; Real Estate</div>
+        <div class="case-verified">&#10003; Verified Employment</div>
+      </div>
+      <div class="case-body">
+        <div class="case-tenure">Jan 2022 &ndash; Sep 2022 &middot; Pakistan</div>
+        <div class="case-title">Sky Marketing</div>
+        <div class="case-role">SEO Content Writer</div>
+        <div class="tenure-note"><strong>Tenure note:</strong> First professional role &mdash; joined to build foundational SEO skills inside Pakistan's largest real estate marketing company. Left after delivering the content project to pursue a broader digital marketing role.</div>
+        <div class="metrics-row">
+          <div class="metric-box"><div class="mval gold">40+</div><div class="mlbl">Articles Written</div></div>
+          <div class="metric-box"><div class="mval g">Page 1</div><div class="mlbl">Google Rankings</div></div>
+          <div class="metric-box"><div class="mval gold">+28%</div><div class="mlbl">Organic Traffic</div></div>
+          <div class="metric-box"><div class="mval g">On-Page</div><div class="mlbl">SEO Optimised</div></div>
+        </div>
+        <div class="case-desc">Produced 40+ SEO-optimised property blogs and web pages. Conducted keyword research, implemented on-page SEO and improved organic search visibility for competitive real estate keywords in the Pakistani market.</div>
+        <div class="case-footer">
+          <div class="tools"><span class="tool">Keyword Planner</span><span class="tool">SEMrush</span><span class="tool">WordPress</span><span class="tool">Yoast SEO</span><span class="tool">Excel</span></div>
+          <a href="https://skymarketing.com.pk" target="_blank" class="live-link">Visit Company &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="samples-section" id="samples">
+  <div class="stag">Published Work</div>
+  <div class="stitle">Live Writing Samples</div>
+  <div class="ssub">Real published articles on company websites &mdash; click to verify directly. These are live, indexed pages.</div>
+  <div class="samples-grid">
+    <div class="sample-card">
+      <div class="sample-img-wrap">
+        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80" alt="SEO blog writing"/>
+        <div class="sample-label">Live Article</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-type">SEO Blog &middot; Austin Macauley</div>
+        <div class="sample-title">5 Tips for Authors to Use Keywords the Right Way</div>
+        <div class="sample-desc">In-depth guide on keyword research, title optimisation and building SEO-friendly author websites. Targets writing and publishing niche keywords.</div>
+        <div class="sample-stats">
+          <div class="s-stat">Type: <strong>How-To Blog</strong></div>
+          <div class="s-stat">Focus: <strong>On-Page SEO</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="sample-card">
+      <div class="sample-img-wrap">
+        <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&q=80" alt="Book marketing article"/>
+        <div class="sample-label">Live Article</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-type">Content Marketing &middot; Austin Macauley UAE</div>
+        <div class="sample-title">How Book Marketing Helps Authors Reach Their Target Audience</div>
+        <div class="sample-desc">Covers digital marketing strategy for authors &mdash; SEO blogs, social media strategy and email marketing in the publishing vertical.</div>
+        <div class="sample-stats">
+          <div class="s-stat">Type: <strong>Strategy Article</strong></div>
+          <div class="s-stat">Focus: <strong>Book Marketing</strong></div>
+        </div>
+      </div>
+    </div>
+    <div class="sample-card">
+      <div class="sample-img-wrap">
+        <img src="https://redmarker.io/wp-content/uploads/2022/02/optin-form-img.jpg" alt="EdTech content"/>
+        <div class="sample-label">Social Campaign</div>
+      </div>
+      <div class="sample-body">
+        <div class="sample-type">Digital Campaign &middot; Red Marker Systems</div>
+        <div class="sample-title">EdTech Pakistan &mdash; Audience Growth &amp; Lead Campaign</div>
+        <div class="sample-desc">Managed full content calendar, community engagement and paid social for Pakistan's leading digital assessment platform. rTestGen and rMarker product promotions.</div>
+        <div class="sample-stats">
+          <div class="s-stat">Platform: <strong>Meta + LinkedIn</strong></div>
+          <div class="s-stat">Result: <strong>+42% Reach</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="writing-links">
+    <a href="https://www.austinmacauley.com/blog/5-tips-authors-use-keywords-right-way" target="_blank" class="w-link">
+      <div class="w-icon">&#128221;</div>
+      <div><div class="w-pub">Austin Macauley &middot; Live Article</div><div class="w-title">5 Tips for Authors to Use Keywords the Right Way</div><span class="w-tag">&#10003; Live &amp; Indexed on Google</span></div>
+    </a>
+    <a href="https://austinmacauley.ae/book-marketing-helps-authors-reach-target-audience/" target="_blank" class="w-link">
+      <div class="w-icon">&#128218;</div>
+      <div><div class="w-pub">Austin Macauley UAE &middot; Live Article</div><div class="w-title">How Book Marketing Helps Authors Reach Their Target Audience</div><span class="w-tag">&#10003; Live &amp; Indexed on Google</span></div>
+    </a>
+    <a href="https://www.austinmacauley.com/blog/digital-marketing-authors-tips-and-tricks-self-promote-books" target="_blank" class="w-link">
+      <div class="w-icon">&#128640;</div>
+      <div><div class="w-pub">Austin Macauley &middot; Live Article</div><div class="w-title">7 Tips for Authors to Self-Promote Books Online</div><span class="w-tag">&#10003; Live &amp; Indexed on Google</span></div>
+    </a>
+    <a href="https://redmarker.io/edtech-pakistan/" target="_blank" class="w-link">
+      <div class="w-icon">&#127891;</div>
+      <div><div class="w-pub">Red Marker Systems &middot; Web Content</div><div class="w-title">EdTech Pakistan &mdash; How RedMarker is Revolutionising Education</div><span class="w-tag">&#10003; Live on redmarker.io</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="seo">
+  <div class="stag">Methodology</div>
+  <div class="stitle">SEO &amp; Content Framework</div>
+  <div class="ssub">The 11-step process applied to every content brief &mdash; from keyword research to off-page authority building.</div>
+  <div class="seo-cols">
+    <div>
+      <div style="margin-bottom:2rem">
+        <div class="phase-lbl">Phase 1 &mdash; Research</div>
+        <div class="seo-step"><div class="step-num">01</div><div class="step-body"><strong>Audience &amp; Intent Mapping</strong><p>Define reader stage (awareness / consideration / decision) and what answer they need before writing a single word.</p></div></div>
+        <div class="seo-step"><div class="step-num">02</div><div class="step-body"><strong>Competitor Gap Analysis</strong><p>Use SEMrush to find keywords competitors rank for that you don't &mdash; low-hanging fruit and long-tail opportunities with conversion potential.</p></div></div>
+        <div class="seo-step"><div class="step-num">03</div><div class="step-body"><strong>Keyword Clustering</strong><p>Group keywords by topic and intent into content pillars mapped to specific page types to avoid cannibalization.</p></div></div>
+      </div>
+      <div>
+        <div class="phase-lbl">Phase 2 &mdash; On-Page</div>
+        <div class="seo-step"><div class="step-num">04</div><div class="step-body"><strong>Title Tags &amp; Meta</strong><p>Primary keyword in title within 60 chars; compelling meta under 155 chars with value proposition and soft CTA.</p></div></div>
+        <div class="seo-step"><div class="step-num">05</div><div class="step-body"><strong>Content Structure H1&rarr;H3</strong><p>Logical heading hierarchy with keywords in H2/H3. Featured-snippet-ready: definition paragraphs, numbered lists, comparison tables.</p></div></div>
+        <div class="seo-step"><div class="step-num">06</div><div class="step-body"><strong>Internal Linking</strong><p>Link new content to existing high-authority pages, passing PageRank while improving time-on-site and crawl depth.</p></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="margin-bottom:2rem">
+        <div class="phase-lbl">Phase 3 &mdash; Content Creation</div>
+        <div class="seo-step"><div class="step-num">07</div><div class="step-body"><strong>E-E-A-T Principle</strong><p>Every piece demonstrates Experience, Expertise, Authoritativeness, and Trust &mdash; essential for Google quality rater guidelines.</p></div></div>
+        <div class="seo-step"><div class="step-num">08</div><div class="step-body"><strong>Semantic SEO &amp; LSI</strong><p>Latent Semantic Indexing keywords used naturally &mdash; helping Google understand the full topic context of every page.</p></div></div>
+        <div class="seo-step"><div class="step-num">09</div><div class="step-body"><strong>6-Month Content Refresh</strong><p>Audit existing content every 6 months &mdash; update stats, add sections, re-optimise for updated trends. Faster ROI than building from scratch.</p></div></div>
+      </div>
+      <div>
+        <div class="phase-lbl">Phase 4 &mdash; Off-Page &amp; Reporting</div>
+        <div class="seo-step"><div class="step-num">10</div><div class="step-body"><strong>Link Building</strong><p>Guest posting on industry-relevant sites, digital PR and partner content exchanges to build domain authority sustainably.</p></div></div>
+        <div class="seo-step"><div class="step-num">11</div><div class="step-body"><strong>Monthly KPI Dashboard</strong><p>Track organic sessions, keyword positions, CTR, bounce rate and conversions in GSC + Analytics &mdash; actionable stakeholder reports.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="kw-section" id="keywords">
+  <div class="stag">Research Sample</div>
+  <div class="stitle">Keyword Research Matrix</div>
+  <div class="ssub">Sample map demonstrating research methodology across education and publishing verticals.</div>
+  <div style="overflow-x:auto">
+  <table class="kw">
+    <thead><tr><th>Keyword</th><th>Volume/Mo</th><th>Difficulty</th><th>Intent</th><th>Content Type</th><th>Priority</th></tr></thead>
+    <tbody>
+      <tr><td>online A-level courses Pakistan</td><td><span class="vol vh">8,100</span></td><td>38</td><td><span class="kintent kt">Transactional</span></td><td>Landing Page</td><td>&#11088;&#11088;&#11088;</td></tr>
+      <tr><td>Cambridge O-level preparation tips</td><td><span class="vol vh">5,400</span></td><td>29</td><td><span class="kintent ki">Informational</span></td><td>Blog Post</td><td>&#11088;&#11088;&#11088;</td></tr>
+      <tr><td>best EdTech companies in Pakistan</td><td><span class="vol vm">2,900</span></td><td>22</td><td><span class="kintent ki">Informational</span></td><td>Listicle Blog</td><td>&#11088;&#11088;</td></tr>
+      <tr><td>fast track A-levels online</td><td><span class="vol vm">2,100</span></td><td>25</td><td><span class="kintent kt">Transactional</span></td><td>Landing Page</td><td>&#11088;&#11088;&#11088;</td></tr>
+      <tr><td>digital assessment tools schools</td><td><span class="vol vm">1,600</span></td><td>31</td><td><span class="kintent kn">Navigational</span></td><td>Product Page</td><td>&#11088;&#11088;</td></tr>
+      <tr><td>how to publish a book UAE</td><td><span class="vol vm">1,300</span></td><td>18</td><td><span class="kintent ki">Informational</span></td><td>Guide / Blog</td><td>&#11088;&#11088;</td></tr>
+      <tr><td>SEO for book authors</td><td><span class="vol vl">880</span></td><td>15</td><td><span class="kintent ki">Informational</span></td><td>Blog Post</td><td>&#11088;&#11088;</td></tr>
+      <tr><td>e-marking exam software Pakistan</td><td><span class="vol vl">590</span></td><td>12</td><td><span class="kintent kt">Transactional</span></td><td>Product Page</td><td>&#11088;&#11088;&#11088;</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="campaigns-section" id="campaigns">
+  <div class="stag">Ad Campaign Plans</div>
+  <div class="stitle">Campaign Strategies</div>
+  <div class="ssub">Full-funnel paid media plans with budget breakdowns, ad copy and projected KPIs.</div>
+  <div class="camp-tabs">
+    <button class="camp-tab active" onclick="switchTab(0)">&#128241; iQera Schools &mdash; PKR 1 Lac</button>
+    <button class="camp-tab" onclick="switchTab(1)">&#128218; UAE Book Publishing &mdash; AED 10,000</button>
+  </div>
+
+  <div class="camp-panel active" id="p0">
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:2rem;max-width:600px">Full-funnel Meta Ads strategy for A-level/O-level enrollment. Goal: maximum quality leads at minimum cost. Platform: Facebook + Instagram.</p>
+    <div class="funnel-layout">
+      <div>
+        <p style="font-size:.72rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem">Marketing Funnel</p>
+        <div class="f-stage top"><div class="f-stagename">Top of Funnel &mdash; Awareness</div><div class="f-title">Reach &amp; Brand Awareness</div><div class="f-bud" style="color:var(--gold)">PKR 25,000 (25%)</div><div class="f-goal">Video Reels &middot; Est. 80,000 reach</div></div>
+        <div style="text-align:center;color:var(--border);padding:.3rem 0">&#9660;</div>
+        <div class="f-stage mid"><div class="f-stagename">Middle of Funnel &mdash; Consideration</div><div class="f-title">Engagement &amp; Trust</div><div class="f-bud" style="color:var(--accent)">PKR 35,000 (35%)</div><div class="f-goal">Carousel + Testimonials &middot; ~20K clicks</div></div>
+        <div style="text-align:center;color:var(--border);padding:.3rem 0">&#9660;</div>
+        <div class="f-stage bot"><div class="f-stagename">Bottom of Funnel &mdash; Conversion</div><div class="f-title">Lead Form Ads</div><div class="f-bud" style="color:var(--green)">PKR 40,000 (40%)</div><div class="f-goal">Instant Forms &middot; Target: 120 leads</div></div>
+      </div>
+      <div class="camp-cards">
+        <div class="cc">
+          <div class="cc-head">&#127909; TOFU &mdash; Video Awareness &middot; PKR 25,000</div>
+          <div class="cc-metrics">
+            <div class="cc-m"><div class="cc-mv" style="color:var(--gold)">80K+</div><div class="cc-ml">Est. Reach</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--gold)">PKR 0.3</div><div class="cc-ml">Est. CPM</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--gold)">15s</div><div class="cc-ml">Reel Length</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--gold)">2%+</div><div class="cc-ml">Target CTR</div></div>
+          </div>
+          <div class="copybox">"Struggling to finish A-levels on your schedule? IQera Schools lets you study at your own pace &mdash; Cambridge-approved, 100% online. No time limits. Start anytime."</div>
+        </div>
+        <div class="cc">
+          <div class="cc-head">&#128444; MOFU &mdash; Carousel Testimonial &middot; PKR 35,000</div>
+          <div class="cc-metrics">
+            <div class="cc-m"><div class="cc-mv" style="color:var(--accent)">20K</div><div class="cc-ml">Est. Clicks</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--accent)">PKR 1.75</div><div class="cc-ml">Est. CPC</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--accent)">3&ndash;5%</div><div class="cc-ml">Target CTR</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--accent)">2%</div><div class="cc-ml">Lookalike</div></div>
+          </div>
+          <div class="copybox">Slide 1: "Aisha passed A-Level Biology in 4 months from home." &middot; Slide 2: Subjects + flexible timing &middot; Slide 3: Cambridge badge &middot; CTA: "Apply Today"</div>
+        </div>
+        <div class="cc">
+          <div class="cc-head">&#128203; BOFU &mdash; Lead Form &middot; PKR 40,000</div>
+          <div class="cc-metrics">
+            <div class="cc-m"><div class="cc-mv" style="color:var(--green)">120</div><div class="cc-ml">Est. Leads</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--green)">PKR 333</div><div class="cc-ml">Est. CPL</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--green)">~18</div><div class="cc-ml">Enrollments</div></div>
+            <div class="cc-m"><div class="cc-mv" style="color:var(--green)">15%</div><div class="cc-ml">Close Rate</div></div>
+          </div>
+          <div class="copybox">Headline: "Get Free A-Level Counselling" &middot; Fields: Name / Phone / Subject / City &middot; CTA: "Claim Free Session" &middot; WhatsApp follow-up within 5 mins</div>
+        </div>
+      </div>
+    </div>
+    <div class="camp-sum">
+      <div class="cs-box hl"><div class="cs-val">1,00,000</div><div class="cs-lbl">Total Budget (PKR)</div></div>
+      <div class="cs-box"><div class="cs-val">3,333</div><div class="cs-lbl">Daily Budget</div></div>
+      <div class="cs-box"><div class="cs-val">~120</div><div class="cs-lbl">Projected Leads</div></div>
+      <div class="cs-box"><div class="cs-val">PKR 333</div><div class="cs-lbl">Cost Per Lead</div></div>
+      <div class="cs-box"><div class="cs-val">~18</div><div class="cs-lbl">Est. Enrollments</div></div>
+      <div class="cs-box hl"><div class="cs-val">Meta</div><div class="cs-lbl">Primary Platform</div></div>
+    </div>
+    <div class="camp-notes"><strong>Tools:</strong> Meta Business Suite &middot; Meta Pixel &middot; Google Sheets &middot; WhatsApp Business (5-min follow-up = 3x close rate boost)<br><br><strong>Optimisation:</strong> Week 1 &mdash; Test 2 creatives per stage. Week 2 &mdash; Kill underperformers, scale winner. Week 3&ndash;4 &mdash; Increase daily budget 20% on best ad set. Frequency cap below 4. Refresh creatives if CTR drops below 1.5%.</div>
+  </div>
+
+  <div class="camp-panel" id="p1">
+    <p style="font-size:.83rem;color:var(--muted);margin-bottom:2rem;max-width:600px">Meta + Google Search campaign targeting aspiring authors across UAE. Goal: manuscript submissions and free publishing consultations. 2-month run.</p>
+    <div class="funnel-layout">
+      <div>
+        <p style="font-size:.72rem;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem">Channel Split</p>
+        <div class="f-stage top"><div class="f-stagename">Channel 1 &mdash; Meta Ads</div><div class="f-title">Facebook + Instagram</div><div class="f-bud" style="color:var(--gold)">AED 6,000 (60%)</div><div class="f-goal">TOFU Video + MOFU Carousel + BOFU Lead Form</div></div>
+        <div style="text-align:center;color:var(--border);padding:.3rem 0">+</div>
+        <div class="f-stage bot"><div class="f-stagename">Channel 2 &mdash; Google</div><div class="f-title">Search + Display</div><div class="f-bud" style="color:var(--green)">AED 4,000 (40%)</div><div class="f-goal">High-intent keywords + Retargeting</div></div>
+        <div style="margin-top:1rem;padding:1rem;background:var(--card);border:1px solid var(--border)">
+          <div style="font-size:.68rem;color:var(--gold);margin-bottom:.5rem;text-transform:uppercase;letter-spacing:.1em">2-Month Split</div>
+          <div style="font-size:.78rem;color:var(--muted);line-height:1.8"><strong style="color:var(--text)">Month 1 (AED 5,000):</strong> Broad test &mdash; 3 creatives per format<br><strong style="color:var(--text)">Month 2 (AED 5,000):</strong> Scale winners, add Emirates Lit Festival angle</div>
+        </div>
+      </div>
+      <div class="camp-cards">
+        <div class="cc">
+          <div class="cc-head">&#127909; Meta TOFU &mdash; Video Reel &middot; AED 1,500</div>
+          <div class="copybox">"You wrote a book. Now what? Turn your manuscript into a published reality &mdash; distributed globally. Free publishing consultation for UAE authors."</div>
+          <p style="font-size:.72rem;color:var(--muted);margin-top:.6rem">Audience: 28&ndash;65 &middot; UAE &middot; Interests: Writing, Self-publishing, Storytelling, Poetry</p>
+        </div>
+        <div class="cc">
+          <div class="cc-head">&#128444; MOFU Carousel (AED 2,000) + BOFU Lead Form (AED 2,500)</div>
+          <div class="copybox">Carousel: "From Manuscript to Bookstore" &mdash; UK/USA/UAE distribution &middot; Author testimonial &middot; Submit Today<br><br>Lead Form: "Get a Free Publishing Consultation" &middot; Name / Email / Genre / Ready? &middot; CTA: "Claim My Free Session"</div>
+        </div>
+        <div class="cc">
+          <div class="cc-head">&#128269; Google Search (AED 2,500) + Display Retarget (AED 1,500)</div>
+          <div style="display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:.8rem">
+            <span style="font-size:.68rem;border:1px solid var(--border);padding:.2rem .5rem;color:var(--muted)">publish a book UAE</span>
+            <span style="font-size:.68rem;border:1px solid var(--border);padding:.2rem .5rem;color:var(--muted)">book publishers Dubai</span>
+            <span style="font-size:.68rem;border:1px solid var(--border);padding:.2rem .5rem;color:var(--muted)">self publish UAE</span>
+            <span style="font-size:.68rem;border:1px solid var(--border);padding:.2rem .5rem;color:var(--muted)">manuscript submission UAE</span>
+          </div>
+          <div class="copybox">Ad: "Publish Your Book in UAE &mdash; Free Author Consultation | Global Distribution" &middot; Description: "Cambridge-reviewed publishing. UK, US and UAE distribution. Submit today."</div>
+        </div>
+      </div>
+    </div>
+    <div class="camp-sum">
+      <div class="cs-box hl"><div class="cs-val">AED 10,000</div><div class="cs-lbl">Total Budget</div></div>
+      <div class="cs-box"><div class="cs-val">AED 167</div><div class="cs-lbl">Daily Budget</div></div>
+      <div class="cs-box"><div class="cs-val">~100</div><div class="cs-lbl">Projected Leads</div></div>
+      <div class="cs-box"><div class="cs-val">AED 100</div><div class="cs-lbl">Est. CPL</div></div>
+      <div class="cs-box"><div class="cs-val">60 Days</div><div class="cs-lbl">Campaign Length</div></div>
+      <div class="cs-box hl"><div class="cs-val">Meta + Google</div><div class="cs-lbl">Platforms</div></div>
+    </div>
+    <div class="camp-notes"><strong>Target:</strong> Aspiring authors 28&ndash;65 in UAE (Dubai, Abu Dhabi, Sharjah) &middot; English and Arabic speakers &middot; Interests: creative writing, literature, poetry<br><br><strong>Optimisation:</strong> A/B test 2 headlines per ad &middot; Target CTR above 2% Meta, above 5% Google &middot; Negative keywords: free ebooks, PDF download &middot; Refresh creatives Week 5 &middot; KPIs: Impressions, CTR, CPL, Consultations Booked, Manuscript Submissions</div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="stag" style="justify-content:center">Let's Work Together</div>
+  <div class="stitle">Available for Hire in UAE</div>
+  <p style="color:var(--muted);max-width:440px;margin:1rem auto 1.5rem;font-size:.9rem;line-height:1.8">Open to Social Media Executive, Content Strategist and Digital Marketing roles. Available immediately. No visa sponsorship needed.</p>
+  <div class="visa-badge">&#10003; Spouse Visa Holder &middot; No Sponsorship Required &middot; Al Barsha, Dubai</div>
+  <div class="contact-grid">
+    <a href="mailto:sunshineof12@gmail.com" class="contact-item"><span>&#9993;</span> sunshineof12@gmail.com</a>
+    <a href="tel:+971503192092" class="contact-item"><span>&#128222;</span> +971 503 192 092</a>
+    <a href="https://linkedin.com/in/sahibasarkhushzada" target="_blank" class="contact-item"><span>in</span> LinkedIn Profile</a>
+    <div class="contact-item"><span>&#128205;</span> Al Barsha, Dubai UAE</div>
+  </div>
+</section>
+
+<script>
+function switchTab(i){
+  document.querySelectorAll('.camp-tab').forEach((t,j)=>t.classList.toggle('active',j===i));
+  document.querySelectorAll('.camp-panel').forEach((p,j)=>p.classList.toggle('active',j===i));
+}
+</script>
+</body>
+</html>
